@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORDLE DE IVI</title>
+    <!-- Bootstrap-->
+    <link rel="icon" type="image/x-icon" href="/imgs/wordle_logo_32x32.png">
+    <link rel="stylesheet" href="css/hola.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css"> 
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="palabras/palabras.js"></script>
+    <script type="text/javascript" src="palabras/palabras5.js"></script>
+    <script src="https://kit.fontawesome.com/d70d441cb5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand wordle-tit" href="index.php">
+            <strong> WORDLE DE IVI</strong>
+          </a>
+        </div>
+    </nav>
+
+    <div>
+        
+        <div class="tabla" id="tabla">
+            <div class="letrau l1" id="l11">
+                <p id="pl11"></p>
+            </div>
+            <div class="letrau l2" id="l21">
+                <p id="pl21"></p>
+            </div>
+            <div class="letrau l3" id="l31">
+                <p id="pl31"></p>
+            </div>
+            <div class="letrau l4" id="l41">
+                <p id="pl41"></p>
+            </div>
+            <div class="letrau l5" id="l51">
+                <p id="pl51"></p>
+            </div>
+        </div>
+        
+        <div class="teclado" id="teclado">
+            <div class="letra vacio" style="grid-area: vacio;" >
+                <p></p>
+            </div>
+            <div class="letra borrar" style="grid-area: borrar;" >
+                <button class="borrar" type="submit" onclick="borrar()"><i class="fa-solid fa-delete-left" style="width: 40px;"></i></button>
+            </div>
+            <div class="letra l1" style="grid-area: a;" >
+                <input type="button" id="l1" onclick="tecla('A')" value="A">
+            </div>
+
+            <div class="letra" style="grid-area: b;">
+                    <input type="button" id="l1" onclick="tecla('B')" value="B">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: c;">
+                    <input type="button" id="l1" onclick="tecla('C')" value="C">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: d;">
+                    <input type="button" id="l1" onclick="tecla('D')" value="D">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: e;">
+                    <input type="button" id="l1" onclick="tecla('E')" value="E">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: f;">
+                    <input type="button" id="l1" onclick="tecla('F')" value="F">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: g;">
+                    <input type="button" id="l1" onclick="tecla('G')" value="G">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: h;">
+                    <input type="button" id="l1" onclick="tecla('H')" value="H">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: i;">
+                    <input type="button" id="l1" onclick="tecla('I')" value="I">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: j;">
+                    <input type="button" id="l1" onclick="tecla('J')" value="J">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: k;">
+                    <input type="button" id="l1" onclick="tecla('K')" value="K">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: l;">
+                    <input type="button" id="l1" onclick="tecla('L')" value="L">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: m;">
+                    <input type="button" id="l1" onclick="tecla('M')" value="M">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: n;">
+                    <input type="button" id="l1" onclick="tecla('N')" value="N">
+                </div>
+
+            <div class="letra" style="grid-area: ñ;">
+                    <input type="button" id="l1" onclick="tecla('Ñ')" value="Ñ">
+            </div>
+
+
+            <div class="letra" style="grid-area: o;">
+                    <input type="button" id="l1" onclick="tecla('O')" value="O">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: p;">
+                    <input type="button" id="l1" onclick="tecla('P')" value="P">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: q;">
+                    <input type="button" id="l1" onclick="tecla('Q')" value="Q">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: r;">
+                    <input type="button" id="l1" onclick="tecla('R')" value="R">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: s;">
+                    <input type="button" id="l1" onclick="tecla('S')" value="S">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: t;">
+                    <input type="button" id="l1" onclick="tecla('T')" value="T">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: u;">
+                    <input type="button" id="l1" onclick="tecla('U')" value="U">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: v;">
+                    <input type="button" id="l1" onclick="tecla('V')" value="V">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: w;">
+                    <input type="button" id="l1" onclick="tecla('W')" value="W">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: x;">
+                    <input type="button" id="l1" onclick="tecla('X')" value="X">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: y;">
+                    <input type="button" id="l1" onclick="tecla('Y')" value="Y">
+
+                </div>
+
+
+            <div class="letra" style="grid-area: z;">
+                    <input type="button" id="l1" onclick="tecla('Z')" value="Z">
+
+                </div>
+        </div>
+    </div>
+
+    <div id="resultadobox">
+        <p id="resultado"></p>
+    </div>
+    <div class="creditos">
+        <p>©<a href="https://www.linkedin.com/in/iv%C3%A1n-gonz%C3%A1lez-gordo/">ivi1712</a> </p>
+        <p style="font-size: 10px;">Version: v2.2</p>
+    </div>
+    <script>
+        function palabraAleatoria() {
+            return Math.floor(Math.random() * (palabras.length - 0));
+        }
+        //psecreta = "QUIEN"
+        psecreta = palabras[palabraAleatoria()].toUpperCase();
+    </script>
+</body>
+</html>
