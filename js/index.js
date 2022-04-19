@@ -140,7 +140,7 @@ function borrar() {
 var filas = 0;
 
 function newCasillas(r) {
-    if (filas != 6) {
+    if (filas != 5) {
         for (let i = 1; i < 6; i++) {
             i = String(i);
             r = String(r);
